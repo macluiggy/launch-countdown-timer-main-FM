@@ -1,0 +1,13 @@
+/*variables*/
+/*COLORS*/
+/*primary*/
+/*neutral*/
+/*Typography*/
+/*The above is just visible in the scss file*/
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+body {
+  font-size: 14px;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,22 @@
+
+/*variables*/
+/*COLORS*/
+/*primary*/
+$grayish_blue: hsl(27, 18%, 59%);
+$soft_red: hsl(345, 95%, 68%);
+/*neutral*/
+$white: hsl(0, 0%, 100%);
+$wark_desaturated_blue: hsl(236, 21%, 26%);
+$wery_dark_blue: hsl(235, 16%, 14%);
+$wery_dark_\\mostly_black\\_blue: hsl(234, 17%, 12%);
+
+/*Typography*/
+$red_hat_text: 'Red Hat Text', sans-serif;;
+
+/*The above is just visible in the scss file*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap'); 
+
+body {
+	font-size: 14px;
+	font-family: $red_hat_text;
+}
