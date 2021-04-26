@@ -54,4 +54,6 @@ body {
 }
 .time {
 	@include border-stroke(medium);
+	color: $soft_red;
+	text-align: center
 }
