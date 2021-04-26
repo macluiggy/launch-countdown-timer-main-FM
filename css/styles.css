@@ -3,11 +3,39 @@
 /*primary*/
 /*neutral*/
 /*Typography*/
+/*functions*/
 /*The above is just visible in the scss file*/
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
 body {
   font-size: 14px;
   font-family: "Red Hat Text", sans-serif;
+  background-color: #191a24;
+}
+
+.title-container {
+  border: solid 3px white;
+  color: white;
+  text-align: center;
+  padding: 6em;
+}
+.title-container h1 {
+  font-size: 1.2857143em;
+  /* 18px / 14px*/
+  font-weight: normal;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.time-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  width: 80%;
+  margin: 0 auto;
+  border: solid 3px white;
+}
+
+.time {
+  border: solid 3px white;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -8,15 +8,50 @@ $soft_red: hsl(345, 95%, 68%);
 $white: hsl(0, 0%, 100%);
 $wark_desaturated_blue: hsl(236, 21%, 26%);
 $wery_dark_blue: hsl(235, 16%, 14%);
-$wery_dark_\\mostly_black\\_blue: hsl(234, 17%, 12%);
+$wery_dark_mostly_black_blue: hsl(234, 17%, 12%);
 
 /*Typography*/
 $red_hat_text: 'Red Hat Text', sans-serif;;
 
+/*functions*/
+@mixin border-stroke($val) {
+	@if $val == light {
+		border: solid 1px white;
+	} @else if $val == medium {
+		border: solid 3px white;
+	} @else if $val == heavy {
+		border: solid 6px white;
+	} @else {
+		border: none;
+	}
+}
 /*The above is just visible in the scss file*/
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap'); 
 
 body {
 	font-size: 14px;
 	font-family: $red_hat_text;
+	background-color: $wery_dark_mostly_black_blue;
+}
+.title-container {
+	@include border-stroke(medium);
+	color: $white;
+	text-align: center;
+	h1 {
+		font-size: 1.2857143em; /* 18px / 14px*/
+		font-weight: normal;
+		letter-spacing: 0.3em;
+		text-transform: uppercase;
+	}
+	padding: 6em;
+}
+.time-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	width: 80%;
+	margin: 0 auto;
+	@include border-stroke(medium);
+}
+.time {
+	@include border-stroke(medium);
 }
