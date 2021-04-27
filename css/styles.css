@@ -35,7 +35,7 @@ body {
 
 .time-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
   width: 50%;
   margin: 0 auto;
 }
@@ -79,7 +79,7 @@ footer figure img {
     width: 90%;
   }
   .time-container .watch {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .time-container .time {
     font-size: 0.6rem;

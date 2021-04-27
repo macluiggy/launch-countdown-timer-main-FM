@@ -3,8 +3,8 @@ var watchDays = get('.watch-days');
 var watchHours = get('.watch-hours');
 var watchMinutes = get('.watch-minutes');
 var watchSeconds = get('.watch-seconds');
-var year = 2022;
-var countDownDate = new Date(`Jan 5, ${year} 15:37:25`).getTime();
+var year = 2021;
+var countDownDate = new Date(`may 27, ${year} 14:07:00`).getTime();
 
 //funcion que se va a actualizar cada segundo
 let watch = setInterval(() => {
@@ -32,7 +32,9 @@ let watch = setInterval(() => {
     }
 
     //cambia el año
-    if (difference < 0) {
+    if (difference <= 0) {
     	year +=1;
+    	countDownDate = new Date(`april 27, ${year} 14:01:00`).getTime();
     }
+    console.log(year);
 }, 1000)
