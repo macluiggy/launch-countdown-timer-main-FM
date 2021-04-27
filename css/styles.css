@@ -13,10 +13,12 @@ body {
 }
 
 .title-container {
-  border: solid 3px white;
+  border: solid 1px white;
   color: white;
   text-align: center;
-  padding: 6em;
+  width: 90%;
+  margin: 0 auto;
+  padding: 6em 0;
 }
 .title-container h1 {
   font-size: 1.2857143em;
@@ -24,20 +26,43 @@ body {
   font-weight: normal;
   letter-spacing: 0.3em;
   text-transform: uppercase;
+  border: solid 1px white;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .time-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  width: 80%;
+  grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+  width: 50%;
   margin: 0 auto;
   border: solid 3px white;
 }
-
-.time {
-  border: solid 3px white;
+.time-container .time {
+  border: none;
+  color: #8486a9;
+  text-align: center;
+  padding: 2em;
+  font-size: 1.5vw;
+}
+.time-container .watch {
   color: #fb6087;
   text-align: center;
+  border: solid 1px white;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .time-container {
+    width: 90%;
+  }
+  .time-container .watch {
+    font-size: 3rem;
+  }
+  .time-container .time {
+    font-size: 0.6rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

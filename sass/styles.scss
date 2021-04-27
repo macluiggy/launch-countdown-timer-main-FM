@@ -1,4 +1,3 @@
-
 /*variables*/
 /*COLORS*/
 /*primary*/
@@ -6,54 +5,95 @@ $grayish_blue: hsl(27, 18%, 59%);
 $soft_red: hsl(345, 95%, 68%);
 /*neutral*/
 $white: hsl(0, 0%, 100%);
-$wark_desaturated_blue: hsl(236, 21%, 26%);
-$wery_dark_blue: hsl(235, 16%, 14%);
-$wery_dark_mostly_black_blue: hsl(234, 17%, 12%);
+$dark_desaturated_blue: hsl(236, 21%, 26%);
+$very_dark_blue: hsl(235, 16%, 14%);
+$very_dark_mostly_black_blue: hsl(234, 17%, 12%);
+$third_text_color: hsl(237, 18%, 59%);
 
 /*Typography*/
-$red_hat_text: 'Red Hat Text', sans-serif;;
+$red_hat_text: 'Red Hat Text',
+sans-serif;
+;
 
 /*functions*/
 @mixin border-stroke($val) {
-	@if $val == light {
-		border: solid 1px white;
-	} @else if $val == medium {
-		border: solid 3px white;
-	} @else if $val == heavy {
-		border: solid 6px white;
-	} @else {
-		border: none;
-	}
+    @if $val==light {
+        border: solid 1px white;
+    }
+
+    @else if $val==medium {
+        border: solid 3px white;
+    }
+
+    @else if $val==heavy {
+        border: solid 6px white;
+    }
+
+    @else {
+        border: none;
+    }
 }
+
 /*The above is just visible in the scss file*/
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
 
 body {
-	font-size: 14px;
-	font-family: $red_hat_text;
-	background-color: $wery_dark_mostly_black_blue;
+    font-size: 14px;
+    font-family: $red_hat_text;
+    background-color: $very_dark_mostly_black_blue;
 }
+
 .title-container {
-	@include border-stroke(medium);
-	color: $white;
-	text-align: center;
-	h1 {
-		font-size: 1.2857143em; /* 18px / 14px*/
-		font-weight: normal;
-		letter-spacing: 0.3em;
-		text-transform: uppercase;
-	}
-	padding: 6em;
+    @include border-stroke(light);
+    color: $white;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    h1 {
+        font-size: 1.2857143em;
+        /* 18px / 14px*/
+        font-weight: normal;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        @include border-stroke(light);
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    padding: 6em 0;
 }
+
 .time-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-	width: 80%;
-	margin: 0 auto;
-	@include border-stroke(medium);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+    width: 50%;
+    margin: 0 auto;
+    @include border-stroke(medium);
+
+    .time {
+        @include border-stroke(lighting);
+        color: $third_text_color;
+        text-align: center;
+        padding: 2em;
+        font-size: 1.5vw;
+    }
+    .watch {
+    	color: $soft_red;
+    	text-align: center;
+    	@include border-stroke(light);
+    	font-size: 5vw;
+    	font-weight: bold;
+    }
 }
-.time {
-	@include border-stroke(medium);
-	color: $soft_red;
-	text-align: center
+@media screen and (max-width: 600px) {
+	.time-container {
+		width: 90%;
+
+		.watch {
+			font-size: 3.0rem;
+		}
+		.time {
+			font-size: 0.6rem;
+		}
+	}
 }
