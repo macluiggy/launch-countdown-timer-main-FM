@@ -45,6 +45,7 @@ body {
     margin: 0 auto;
     min-height: 100vh;
     //@include border-stroke(heavy);
+    min-width: 300px;
 }
 
 .title-container {
@@ -110,7 +111,7 @@ footer {
 
 		img {
 			padding: 1em;
-			pointer: cursor;
+			cursor: pointer;
 		}
 	}
 }
@@ -127,3 +128,18 @@ footer {
         }
     }
 }
+
+
+//APRENDIENDO A USAR MIXIN CON FOR EN SASS
+//@mixin border($val) {
+//	@for $i from 1 to 5 {
+//		.text-#{$i} {
+//			border: solid $i * $val white;
+//			width: 10% * $i;
+//		};
+//	}
+//}
+//.text-container {
+//	@include border(2px);
+//}
+

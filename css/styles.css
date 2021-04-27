@@ -13,6 +13,7 @@ body {
   position: relative;
   margin: 0 auto;
   min-height: 100vh;
+  min-width: 300px;
 }
 
 .title-container {
@@ -70,7 +71,7 @@ footer figure {
 }
 footer figure img {
   padding: 1em;
-  pointer: cursor;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
