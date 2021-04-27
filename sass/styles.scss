@@ -41,21 +41,26 @@ body {
     font-size: 14px;
     font-family: $red_hat_text;
     background-color: $very_dark_mostly_black_blue;
+    position: relative;
+    margin: 0 auto;
+    min-height: 100vh;
+    //@include border-stroke(heavy);
 }
 
 .title-container {
-    @include border-stroke(light);
+    // @include border-stroke(light);
     color: $white;
     text-align: center;
     width: 90%;
     margin: 0 auto;
+
     h1 {
         font-size: 1.2857143em;
         /* 18px / 14px*/
         font-weight: normal;
         letter-spacing: 0.3em;
         text-transform: uppercase;
-        @include border-stroke(light);
+        //@include border-stroke(light);
         width: 90%;
         margin: 0 auto;
     }
@@ -68,32 +73,57 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
     width: 50%;
     margin: 0 auto;
-    @include border-stroke(medium);
+    //@include border-stroke(medium);
 
     .time {
-        @include border-stroke(lighting);
+        //@include border-stroke(lighting);
         color: $third_text_color;
         text-align: center;
         padding: 2em;
         font-size: 1.5vw;
     }
+
     .watch {
-    	color: $soft_red;
-    	text-align: center;
-    	@include border-stroke(light);
-    	font-size: 5vw;
-    	font-weight: bold;
+        color: $soft_red;
+        text-align: center;
+        //@include border-stroke(light);
+        font-size: 5vw;
+        font-weight: bold;
     }
 }
-@media screen and (max-width: 600px) {
-	.time-container {
-		width: 90%;
 
-		.watch {
-			font-size: 3.0rem;
-		}
-		.time {
-			font-size: 0.6rem;
+.attribution {
+    color: white;
+}
+.attribution a {
+    color: $soft_red;
+}
+footer {
+	//@include border-stroke(light);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	figure {
+		display: flex;
+		//@include border-stroke(light);
+		justify-content: center;
+
+		img {
+			padding: 1em;
+			pointer: cursor;
 		}
 	}
+}
+@media screen and (max-width: 600px) {
+    .time-container {
+        width: 90%;
+
+        .watch {
+            font-size: 3.0rem;
+        }
+
+        .time {
+            font-size: 0.6rem;
+        }
+    }
 }
