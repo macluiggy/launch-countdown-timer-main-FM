@@ -33,8 +33,8 @@ let watch = setInterval(() => {
 
     //cambia el año
     if (difference <= 0) {
-    	year +=1;
-    	countDownDate = new Date(`april 27, ${year} 14:01:00`).getTime();
+        year += 1;
+        countDownDate = new Date(`april 27, ${year} 14:01:00`).getTime();
     }
     console.log(year);
 }, 1000)
