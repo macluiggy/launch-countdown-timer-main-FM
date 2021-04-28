@@ -48,7 +48,7 @@ Users should be able to:
 this is the first project i use a preprocessor like SASS, it's rally cool use it becouse it automatize some things that otherwise you must do with plain css. I learned things such as @mixins, @for, @each, variables. partials that are only implement in SASS and not in CSS.
 For example, i used the @mixin method to make a border of an element depending in its arguments, this is the code:
 
-```scss
+```css
 @mixin border-stroke($val) {
     @if $val==light {
         border: solid 1px white;
