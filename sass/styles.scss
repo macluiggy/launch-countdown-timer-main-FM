@@ -96,25 +96,29 @@ body {
 .attribution {
     color: white;
 }
+
 .attribution a {
     color: $soft_red;
 }
-footer {
-	//@include border-stroke(light);
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	figure {
-		display: flex;
-		//@include border-stroke(light);
-		justify-content: center;
 
-		img {
-			padding: 1em;
-			cursor: pointer;
-		}
-	}
+footer {
+    //@include border-stroke(light);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    figure {
+        display: flex;
+        //@include border-stroke(light);
+        justify-content: center;
+
+        img {
+            padding: 1em;
+            cursor: pointer;
+        }
+    }
 }
+
 @media screen and (max-width: 600px) {
     .time-container {
         width: 90%;
@@ -142,4 +146,3 @@ footer {
 //.text-container {
 //	@include border(2px);
 //}
-
