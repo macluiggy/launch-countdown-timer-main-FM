@@ -38,3 +38,40 @@ let watch = setInterval(() => {
     }
     console.log(year);
 }, 1000)
+
+
+// USAMOS AJAX PARA AÑADIR LAS IMAGENES DEL FOOTER CON EL FORMATO Json
+let xhr = new XMLHttpRequest();
+
+xhr.onload = () => {
+    if (xhr.status === 200) {
+        // statement
+        let jsonObject = JSON.parse(xhr.responseText);
+
+        let imgs = '';
+        jsonObject.imgs.forEach( img => {
+            // statements
+            imgs += `<img src="${img.src}" alt="${img.alt}">`
+        });
+
+        document.getElementById('imgs-container').innerHTML = imgs;
+    }
+}
+
+
+
+xhr.open('GET', './data/images.json', true);
+xhr.send(null);
+
+//USAMOS AJAX PARA MOSTRAR EL TITULO EN PANTALLA QUE PROCIENE DE UN ARCHIVO HTML
+let xhr2 = new XMLHttpRequest();
+xhr2.onload = () => {
+    if (xhr2.status === 200) {
+        // statement
+        let response = xhr2.responseText;
+        document.getElementsByClassName('title-container')[0].innerHTML = response;
+    }
+}
+
+xhr2.open('GET', './data/title.html', true);
+xhr2.send(null);
